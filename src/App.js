@@ -7,9 +7,13 @@ function App() {
   const [m2,setM2] = useState(0)
   const [sd1,setSd1] = useState(0)
   const [sd2,setSd2] = useState(0)
+  const [p1,setP1] = useState(0)
+  const [p2,setP2] = useState(0)
+  const [n,setN] = useState('')
 
   const [sdSquare,setSdSquare] = useState('')
   const [sampleSizeN,setSampleSizeN] = useState('')
+  
 
 
   const handleCalculation =()=>{
@@ -20,9 +24,19 @@ function App() {
     setSampleSizeN(sampleSizeNVal)
   }
 
+  const handleNcalculation = ()=>{
+    console.log(p1)
+    console.log(p2)
+     let p =(parseFloat(p2)+parseFloat(p1))/2
+     let q = parseFloat(100-p)
+     let Ncalc = parseFloat((7.84*(2*p*q))/((p1-p2)*(p1-p2)))
+     setN(Ncalc.toFixed(2))
+
+  }
+
   return (
     <div className="App">
-      <h1 className='header'>Sample size N caculator</h1>
+      <h1 className='header'>Sample size for mean+SD</h1>
       <form>
       <div className="inputContainer">
           <label htmlFor="sd1">Enter M1 value</label>
@@ -55,6 +69,30 @@ function App() {
         <h2 className='header'><span className="span">Sample size N : </span>{sampleSizeN}</h2>
         }
       </div>
+
+        <div>
+        <h1 className='header'>Sample size for propotion</h1>
+
+          <form>
+          <div className="inputContainer">
+            <label htmlFor="sd1">Enter P1 value</label>
+            <input type='number' name='p1'className='form-input'onChange={(e)=>setP1(e.target.value)}/>
+         </div>
+         <div className="inputContainer">
+            <label htmlFor="sd1">Enter P2 value</label>
+            <input type='number' name='p2'className='form-input'onChange={(e)=>setP2(e.target.value)}/>
+         </div>
+        </form>
+        <div className="answerContainer">
+        <button onClick={handleNcalculation} className="submit-button">calculate</button>
+        { 
+          n &&
+          <h2 className='header'><span className="span">N = </span>{n}</h2>
+        }
+        
+      </div>
+        </div>
+
     </div>
   );
 }
