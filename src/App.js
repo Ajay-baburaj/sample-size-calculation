@@ -71,7 +71,7 @@ function App() {
       </div>
 
         <div>
-        <h1 className='header'>Sample size for propotion</h1>
+        <h1 className='header'>Sample size for proportion</h1>
 
           <form>
           <div className="inputContainer">
