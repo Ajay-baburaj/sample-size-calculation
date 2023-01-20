@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sample-size-calculation/static/css/main.d85c235e.css",
-    "main.js": "/sample-size-calculation/static/js/main.47cbd4d1.js",
+    "main.js": "/sample-size-calculation/static/js/main.4a1f57ef.js",
     "index.html": "/sample-size-calculation/index.html",
     "main.d85c235e.css.map": "/sample-size-calculation/static/css/main.d85c235e.css.map",
-    "main.47cbd4d1.js.map": "/sample-size-calculation/static/js/main.47cbd4d1.js.map"
+    "main.4a1f57ef.js.map": "/sample-size-calculation/static/js/main.4a1f57ef.js.map"
   },
   "entrypoints": [
     "static/css/main.d85c235e.css",
-    "static/js/main.47cbd4d1.js"
+    "static/js/main.4a1f57ef.js"
   ]
 }
